@@ -1,0 +1,15 @@
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.csproj.AssemblyReference.cache
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.AssemblyInfoInputs.cache
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.AssemblyInfo.cs
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.csproj.CoreCompileInputs.cache
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\bin\Debug\net6.0\PlatziEscuelaProyect2.exe
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\bin\Debug\net6.0\PlatziEscuelaProyect2.deps.json
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\bin\Debug\net6.0\PlatziEscuelaProyect2.runtimeconfig.json
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\bin\Debug\net6.0\PlatziEscuelaProyect2.dll
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\bin\Debug\net6.0\PlatziEscuelaProyect2.pdb
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.dll
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\refint\PlatziEscuelaProyect2.dll
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.pdb
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\PlatziEscuelaProyect2.genruntimeconfig.cache
+C:\Users\lbernate\Desktop\platzi\proyectoEF\PlatziEscuelaProyect2\PlatziEscuelaProyect2\obj\Debug\net6.0\ref\PlatziEscuelaProyect2.dll
