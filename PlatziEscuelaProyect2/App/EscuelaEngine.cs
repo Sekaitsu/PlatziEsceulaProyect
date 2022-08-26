@@ -25,8 +25,8 @@ namespace PlatziEscuelaProyect2.App.Entidades
         private void CargarEvaluaciones()
         {
             //se recorren curso, asignaturas y alumnos
-            var lista = new List<Evaluacion>();
-            foreach (var curso in Escuela.Curso)
+            //var lista = new List<Evaluacion>();
+            foreach (var curso in Escuela.Cursos)
             {
                 foreach (var asignatura in curso.Asignaturas)
                 {
@@ -49,26 +49,45 @@ namespace PlatziEscuelaProyect2.App.Entidades
                 }
             }
         }
+        //Metodo que devuelve todos los objetos de la escuela
+        public List<ObjetoEscuelaBase> GetObjetosEscuela()
+        {
+            var listaObj = new List<ObjetoEscuelaBase>();
+            listaObj.Add(Escuela);
+            listaObj.AddRange(Escuela.Cursos);
+
+            foreach(var curso in Escuela.Cursos)
+            {
+                listaObj.AddRange(curso.Asignaturas);
+                listaObj.AddRange(curso.Alumnos);
+
+                foreach ( var alumno in curso.Alumnos)
+                {
+                    listaObj.AddRange(alumno.Evaluaciones);
+                }  
+            }
+             return listaObj;
+        }
         private void CargarAsignaturas()
         {
-            foreach (var curso in Escuela.Curso)
+            foreach (var curso in Escuela.Cursos)
             {
                 //se puede adicionar cualquier tipo de asignaturas
                 var listaAsignaturas = new List<Asignatura>()
-                {
-                    new Asignatura { Name = "Matematicas"         },
-                    new Asignatura { Name = "Educación Fisica"    },
-                    new Asignatura { Name = "Castellano"          },
-                    new Asignatura { Name = "Ciencias Naturales"  }
-                };
+                    {
+                        new Asignatura { Name = "Matematicas"         },
+                        new Asignatura { Name = "Educación Fisica"    },
+                        new Asignatura { Name = "Castellano"          },
+                        new Asignatura { Name = "Ciencias Naturales"  }
+                    };
                 curso.Asignaturas = listaAsignaturas;
             }
         }
         private List<Alumno> GenerarAlumnosAlAzar(int cantidad)
         {
-            string[] nombre1 =      { "Alba", "Felipa", "Esubio", "Frayd", "Donald", "Alvaro", "Nicolás" };
-            string[] nombre2 =      { "Freddy", "Anabel", "Rick", "Muerty", "Silvana", "Diomedes", "Nicomedes", "Teodoro" };
-            string[] apellido1 =    { "Ruiz", "Sarmiento", "Uribe", "Maduro", "Trump", "Toledo", "Herrera" };
+            string[] nombre1    = { "Alba", "Felipa", "Esubio", "Frayd", "Donald", "Alvaro", "Nicolás" };
+            string[] nombre2    = { "Freddy", "Anabel", "Rick", "Muerty", "Silvana", "Diomedes", "Nicomedes", "Teodoro" };
+            string[] apellido1  = { "Ruiz", "Sarmiento", "Uribe", "Maduro", "Trump", "Toledo", "Herrera" };
             //lenguaje integrado de consultas Linq
             var listaAlumnos = from n1 in nombre1
                                from n2 in nombre2
@@ -78,21 +97,20 @@ namespace PlatziEscuelaProyect2.App.Entidades
         }
         private void CargarCursos()
         {
-            Escuela.Curso = new List<Curso>()
-       {
-           new Curso() {Name = "101", Jornada = TiposJornada.Mañana },
-           new Curso() {Name = "201", Jornada = TiposJornada.Mañana },
-           new Curso   {Name = "301", Jornada = TiposJornada.Tarde  },
-           new Curso() {Name = "401", Jornada = TiposJornada.Tarde  },
-           new Curso() {Name = "501", Jornada = TiposJornada.Noche  },
-       };
-            Random random = new Random();
-            foreach (var curso in Escuela.Curso)
+            Escuela.Cursos = new List<Curso>()
+                {
+                   new Curso() {Name = "101", Jornada = TiposJornada.Mañana },
+                   new Curso() {Name = "201", Jornada = TiposJornada.Mañana },
+                   new Curso   {Name = "301", Jornada = TiposJornada.Tarde  },
+                   new Curso() {Name = "401", Jornada = TiposJornada.Tarde  },
+                   new Curso() {Name = "501", Jornada = TiposJornada.Noche  },
+                };
+            Random rnd = new Random();
+            foreach (var c in Escuela.Cursos)
             {
-                int cantRandom = random.Next(5, 25);
-                curso.Alumnos = GenerarAlumnosAlAzar(cantRandom);
+                int cantRandom = rnd.Next(5, 25);
+                c.Alumnos = GenerarAlumnosAlAzar(cantRandom);
             }
         }
     }
-
 }

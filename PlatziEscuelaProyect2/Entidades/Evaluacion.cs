@@ -11,5 +11,10 @@ namespace PlatziEscuelaProyect2.Entidades
         public Alumno Alumno            { get; set; }
         public Asignatura Asignatura    { get; set; }
         public float Nota               { get; set; } //float por que genera decimales
+
+        public override string ToString()
+        {
+            return $"{Nota}, {Alumno.Name}, {Asignatura.Name}";
+        }
     }
 }

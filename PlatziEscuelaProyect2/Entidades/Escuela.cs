@@ -25,15 +25,15 @@ namespace PlatziEscuelaProyect2.Entidades
         public TiposEscuela TipoEscuela { get; set; }
         //se adiciona otra propiedad donde llama a la entidad Cursos[] la cual será usasa en el Program.cs
         // se cambia a lista 
-        public List<Curso> Curso        { get; set; }
-        public Escuela( string name, int año ) => ( name, YearCreacion ) = ( name, año );
-        public Escuela( string name, int año,
+        public List<Curso> Cursos        { get; set; }
+        public Escuela( string name, int year ) => ( Name, YearCreacion ) = ( name, year );
+        public Escuela( string name, int year,
                                TiposEscuela tipo,
-                               string pais = "", string ciudad = "")
+                               string pais = "", string ciudad = "") : base()
         {
-            ( Name, YearCreacion ) = ( name, año );
-            Pais = pais;
-            Ciudad = ciudad;
+            ( Name, YearCreacion ) = ( name, year );
+            Pais    = pais;
+            Ciudad  = ciudad;
         }
         public override string ToString()
         {

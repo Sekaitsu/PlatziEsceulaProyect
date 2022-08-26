@@ -8,13 +8,14 @@ namespace PlatziEscuelaProyect2
 {
     class Program
     {
-        static void Main(string[] strings)
+        static void Main(string[] args)
         {
             var engine = new EscuelaEngine(); //() significa que no recibe parametros
             engine.Inicializar(); //se inicializa
             Printer.WriteTitle("BIENVENIDOS A LA ESCUELA");
             //Printer.Beep(10000, cantidad: 10);
             ImprimirCursosEscuela(engine.Escuela); //Imprime
+            var listadeObjetos = engine.GetObjetosEscuela();
 
             //var obj = new ObjetoEscuelaBase;
             Printer.DrawLine(20);
@@ -55,28 +56,21 @@ namespace PlatziEscuelaProyect2
             WriteLine($"Alumno:         {obj.Name}");
             WriteLine($"AlumnoId:       {obj.UniqueId}");
             WriteLine($"Alumno GetType: {obj.GetType()}");
-
+            
             //obj = evaluacion;
-            //si obj = objeto es igual a alumno
-            if (obj is Alumno)
+            if( obj is Alumno )
             {
                 Alumno alumnoRecuperado = (Alumno)obj;
             }
-
-            if (obj is Alumno alumnoRecuperado2)
-            {
-                var Name = alumnoRecuperado2.Name;
-
-            }
-
-            
+            obj = evaluacion;
+            Alumno? alumnoRecuperado2 = obj as Alumno;
         }
         private static void ImprimirCursosEscuela(Escuela escuela) //FUNCIONA POR QUE  USA escuela.Cursos
         {
             Printer.WriteTitle("Cursos Escuela Platzi");
-            if (escuela?.Curso != null)
+            if (escuela?.Cursos != null)
             {
-                foreach (var Curso in escuela.Curso)
+                foreach (var Curso in escuela.Cursos)
                 {
                     WriteLine($"Nombre {Curso.Name}, Id {Curso.UniqueId}");
                 }

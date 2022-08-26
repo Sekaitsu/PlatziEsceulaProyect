@@ -19,5 +19,7 @@ namespace PlatziEscuelaProyect2.Entidades
         {
             return $"{Name}, {UniqueId}";
         }
+
+
     }
 }
