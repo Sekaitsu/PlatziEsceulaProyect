@@ -20,6 +20,7 @@ namespace PlatziEscuelaProyect2.Entidades
         public TiposJornada Jornada         { get; set; }
         //lista de asignaturas y alumnos
         public List<Asignatura> Asignaturas { get; set; }
-        public List<Alumno> Alumnos         { get; set; }     
+        public List<Alumno> Alumnos         { get; set; } 
+        
     }
 }
